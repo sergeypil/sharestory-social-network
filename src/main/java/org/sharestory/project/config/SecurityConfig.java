@@ -59,7 +59,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/webjars/**",   
                         "/static/**",
                         "/manifest.json",
-                        "/logo192.png")                  
+                        "/logo192.png",
+                        "/favicon.ico")                  
                 .permitAll()
                 .antMatchers(HttpMethod.GET, new String[] {"/","/login", "register", "/topics", "/posts/*",
                 		"/topic/**", "/about"})
