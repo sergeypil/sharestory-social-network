@@ -138,7 +138,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/classes/</outputDirectory>
+							<outputDirectory>${basedir}/target/classes/public/</outputDirectory>
 							<resources>
 								<resource>
 									<directory>${basedir}/react-frontend/build</directory>
