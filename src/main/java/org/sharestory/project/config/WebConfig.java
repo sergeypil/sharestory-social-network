@@ -87,7 +87,8 @@ class ReactResourceResolver implements ResourceResolver {
         if (requestPath == null) return null;
 
         if (rootStaticFiles.contains(requestPath)
-                || requestPath.startsWith(REACT_STATIC_DIR)) {
+                || requestPath.startsWith(REACT_STATIC_DIR) || requestPath.startsWith("js")
+                || requestPath.startsWith("css")) {
             return new ClassPathResource(REACT_DIR + requestPath);
         } else
             return index;
