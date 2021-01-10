@@ -141,7 +141,7 @@
 							<outputDirectory>${basedir}/target/classes/static/</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${basedir}/frontend/build</directory>
+									<directory>${basedir}/react-frontend/build</directory>
 								</resource>
 							</resources>
 						</configuration>
