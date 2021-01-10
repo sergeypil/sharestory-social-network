@@ -51,9 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers(HttpMethod.GET, "/api/comments/**")
                 .permitAll()
-                .antMatchers(HttpMethod.POST, "/api/auth/login")
-                .permitAll()
-                .antMatchers(HttpMethod.POST, "/api/auth/signup")
+                .antMatchers(HttpMethod.POST, "/api/auth/**")
                 .permitAll()
                 .antMatchers("/v2/api-docs",
                         "/configuration/ui",
@@ -61,7 +59,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/configuration/security",
                         "/swagger-ui.html",
                         "/webjars/**",   
-                        "/static/**")                  
+                        "/static/**",
+                        "manifest.json")                  
                 .permitAll()
                 .antMatchers(HttpMethod.GET, new String[] {"/","/login", "register", "/topics", "/posts/*",
                 		"/topic/**", "/about"})
