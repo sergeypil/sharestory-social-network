@@ -75,7 +75,7 @@ public class AuthService {
 
         String token = generateVerificationToken(user);
         EmailMessageContent emailMessageContent = new EmailMessageContent(user.getUsername(),
-        		"http://" + hostName + "/api/auth/accountVerification/" + token);
+        	 "https://sharestory-project.herokuapp.com" + "/api/auth/accountVerification/" + token);
         String htmlPage = mailContentBuilder.build(emailMessageContent);
 		  mailService.sendMail(new NotificationEmail("Confirmation email",
 		  user.getEmail(), htmlPage), true);
