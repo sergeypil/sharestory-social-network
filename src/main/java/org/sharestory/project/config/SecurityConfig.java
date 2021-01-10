@@ -41,8 +41,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .authorizeRequests()
-                .antMatchers("/api/auth/**")
-                .permitAll()
                 .antMatchers(HttpMethod.GET, "/api/topic")
                 .permitAll()
                 .antMatchers(HttpMethod.GET, "/api/posts/")
@@ -60,10 +58,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/swagger-ui.html",
                         "/webjars/**",   
                         "/static/**",
-                        "manifest.json")                  
+                        "/manifest.json")                  
                 .permitAll()
                 .antMatchers(HttpMethod.GET, new String[] {"/","/login", "register", "/topics", "/posts/*",
-                		"/topic/**", "/about"})
+                		"/topic/**", "/about"})//for frontend paths
                 .permitAll()
                 .anyRequest()
                 .authenticated();
