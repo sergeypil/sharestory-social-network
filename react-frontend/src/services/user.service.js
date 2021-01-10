@@ -1,9 +1,9 @@
 //import axios from "axios";
 import axios from "./interceptor";
 import authHeader from "./auth-header";
-import BASE_URL from "./hostname";
+//import BASE_URL from "./hostname";
 
-//const BASE_URL = "192.168.1.100";
+const BASE_URL = process.env.REACT_APP_API_BACKEND_URL;
 const API_URL_POSTS = `${BASE_URL}/api/posts`;
 const API_URL_TOPICS = `${BASE_URL}/api/topic`;
 const API_URL_COMMENTS = `${BASE_URL}/api/comments`;

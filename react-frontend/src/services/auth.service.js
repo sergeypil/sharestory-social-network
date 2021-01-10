@@ -1,8 +1,8 @@
 import axios from "axios";
-import BASE_URL from "./hostname";
+//import BASE_URL from "./hostname";
 
 //const BASE_URL = "192.168.1.100";
-const API_URL = `${BASE_URL}/api/auth/`;
+const API_URL = `${process.env.REACT_APP_API_BACKEND_URL}/api/auth/`;
 
 const register = (username, email, password) => {
   return axios.post(API_URL + "signup", {

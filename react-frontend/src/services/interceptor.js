@@ -1,7 +1,7 @@
 import axios from "axios";
-import BASE_URL from "./hostname";
+//import BASE_URL from "./hostname";
 
-//const BASE_URL = "192.168.1.100";
+const BASE_URL = process.env.REACT_APP_API_BACKEND_URL;
 
 const user = JSON.parse(localStorage.getItem("user"));
 axios.interceptors.response.use((response) => {
