@@ -61,12 +61,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/configuration/security",
                         "/swagger-ui.html",
                         "/webjars/**",   
-                        "/static/**",
-                        "/manifest.json",
-                        "/logo192.png",
-                        "/favicon.ico",
-                        "/staticc/**",
-                        "/staticc")                  
+                        "/static/**")                  
                 .permitAll()
                 .antMatchers(HttpMethod.GET, new String[] {"/","/login", "register", "/topics", "/posts/*",
                 		"/topic/**", "/about"})
