@@ -21,6 +21,7 @@ public class Topic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @Column(unique=true)
     @NotBlank(message = "Name of topic is required")
     private String name;
     

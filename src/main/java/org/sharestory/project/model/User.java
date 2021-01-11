@@ -25,7 +25,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    //@Column(nullable = false, length = 20, unique = true)
+    @Column(unique = true)
     @NotBlank(message = "Username is required")
     @Size(max = 20)
     private String username;
@@ -35,7 +35,7 @@ public class User {
     @Size(min = 3)
     private String password;
     
-    //@Column(nullable = false)
+    @Column(unique = true)
     @Email
     @NotEmpty(message = "Email is required")
     private String email;
